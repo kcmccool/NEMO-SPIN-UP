@@ -77,7 +77,7 @@ The project aims to learn ocean state dynamics by converting physical fields int
 
 | Script | Loss Class | Formulation / Key Strategy | Description |
 | :--- | :--- | :--- | :--- |
-| `loss.py` | `ScaledMaskedLoss` | $\mathcal{L}_{\text{total}} = w_{\text{diff}} \frac{\mathcal{L}_{\text{diff}}}{L_{0,\text{diff}}} + w_{\text{N2}} \frac{\mathcal{L}_{\text{N2}}}{L_{0,\text{N2}}}$ | **Scale Normalization**: Normalizes task losses against step-0 initial baseline values ($L_0$) to balance gradient updates across multi-task heads. |
+| `loss.py` | `ScaledMaskedLoss` | `L_total = w_diff * (L_diff / L0_diff) + w_N2 * (L_N2 / L0_N2)` | **Scale Normalization**: Normalizes task losses against step-0 initial baseline values ($L_0$) to balance gradient updates across multi-task heads. |
 | `loss_mlp.py` | `DynamicMLPLoss` | $\sigma^2 = 1 + \text{softplus}(\theta)$<br>$\mathcal{L} = \frac{1}{2} \left( \frac{\mathcal{L}_{\text{task}}}{\sigma^2} + \log(\sigma^2) \right)$ | **Uncertainty Weighting**: Bounds homoscedastic variance $\ge 1.0$ via shifted Softplus to prevent negative losses or gradient stalling without parameter clipping. |
 | `loss_nca.py` | `DynamicMLPLoss` | $\mathcal{L}_{\text{NCA}} = \mathcal{L}_{\text{base}} + \lambda_{\text{AC}} \mathcal{L}_{\text{AC}} + \lambda_{\text{overflow}} \mathcal{L}_{\text{overflow}}$ | **Physics Multi-Term Loss**: Combines uncertainty-weighted MSE, 3D FFT spatial autocorrelation matching (`rfftn`), and state boundary overflow penalties. |
 
