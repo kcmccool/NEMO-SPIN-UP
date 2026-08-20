@@ -119,7 +119,7 @@ python train_nca.py  # NCA + LPPN pipeline
 
 ## Data and Results
 
-Large datasets (NEMO ocean snapshots), pre-computed feature arrays, training data, generated npy files and model checkpoints are excluded from this repository and are hosted separately.
+Large datasets (NEMO ocean snapshots), pre-computed feature arrays, training data, generated npy files and model checkpoints are excluded from this repository and are hosted separately on Zenodo: https://zenodo.org/records/22030386?preview=1&token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjQ3NjE5MWM0LWNhMGEtNDk3NS05YWIwLTNlNzkwNjdkNzhhYiIsImRhdGEiOnt9LCJyYW5kb20iOiJmZGU5Y2I2OWIwMDI4MTU0ZGNiNjJhM2M5ODY3NzY0YyJ9.4GutNbyyDdXeqnHVk3iRsB5u-zvHE-CmWjcBIlo87TCmzDHnjo_fVPbRUZjzWlX3Dr13kBZympSYs2rOqQDZLQ.
 
 ---
 
