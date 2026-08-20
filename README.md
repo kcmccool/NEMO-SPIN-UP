@@ -1,7 +1,7 @@
 
 # Learning based emulation of ocean-model spin-up dynamics
 
-## Grid-Invariant Ocean Forecasting with Tokenized DINO Features (DINO_GridInvanriant_N2)
+## Grid-Invariant Ocean Forecasting with Tokenized Features (DINO_GridInvariant_N2)
 
 This repository contains the code for  grid-invariant ocean forecasting pipeline built around tokenized ocean fields, featuring three physics-informed model variants for state reconstruction and stratification prediction.
 
