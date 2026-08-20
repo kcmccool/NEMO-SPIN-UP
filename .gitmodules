@@ -1,3 +1,6 @@
 [submodule "nemo_spinup_benchmark"]
 	path = nemo_spinup_benchmark
 	url = https://github.com/kcmccool/nemo-spinup-bench.git
+[submodule "DINO_Fusion_GridInvariantN2"]
+	path = DINO_Fusion_GridInvariantN2
+	url = https://github.com/kcmccool/DINO_Fusion_GridInvariantN2.git
