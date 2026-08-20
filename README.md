@@ -157,7 +157,7 @@ In addition to the primary tokenized grid-invariant architectures, this project 
 
 | Technique | Class Name | Description & Mechanism | Integration / Handling |
 | --- | --- | --- | --- |
-| **Convolutional VAE** | `DimensionalityReductionCVAE` | Projects 2D/3D ocean fields into low-dimensional latent space using convolutional encoder-decoder networks optimized via ELBO loss. | Implements dynamic spatial interpolation for non-standard NEMO grids.|
+| **Convolutional VAE** | `DimensionalityReductionCVAE` | Projects 2D/3D ocean fields into low-dimensional latent space using convolutional encoder-decoder networks optimized via ELBO loss. | Implements dynamic spatial interpolation for NEMO grids|
 
 **Sequential Neural Forecasters**
 
@@ -165,4 +165,4 @@ In addition to the primary tokenized grid-invariant architectures, this project 
 | --- | --- | --- | --- |
 | **Deep Koopman Operator** | `DeepKoopmanForecaster` | Non-linear encoder/decoder linked by a constrained linear transition operator $K$. | Enforces a spectral radius penalty ($\rho(K) \le 1.0$) to constrain eigenvalues and prevent divergence during long rollouts. |
 | **Neural ODE** | `NeuralODEForecaster` | Parameterizes continuous-time hidden state vector fields integrated via `torchdiffeq` solvers (e.g., `dopri5`). | Models non-uniformly sampled or continuous physical time-series trajectories past $t = 1.0$. |
-| **Recurrent Neural Network** | `RNNForecaster` | Standard autoregressive sequence modeling utilizing LSTM or GRU cells. | Serves as a classical deep learning benchmark for non-linear multi-step time series forecasting. |
+| **Recurrent Neural Network** | `RNNForecaster` | Standard autoregressive sequence modeling utilizing LSTM. | Serves as a classical deep learning benchmark for non-linear multi-step time series forecasting. |
