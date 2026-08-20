@@ -113,9 +113,6 @@ python train.py      # Diffusion pipeline
 python train_mlp.py  # Supervised MLP baseline
 python train_nca.py  # NCA + LPPN pipeline
 
-# Evaluation & Metrics
-python evaluate.py
-
 ```
 
 ---
